@@ -1,0 +1,201 @@
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-image: url('123.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    overflow-x: hidden;
+    font-size: 16px; /* Default font size for readability */
+}
+
+/* Welcome Section */
+#welcome {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    text-align: center;
+    animation: fadeInText 2s ease-in-out;
+    padding: 20px;
+}
+
+.welcome-message {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-about {
+    background-color: #ff6f61;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-about:hover {
+    background-color: #e05b4b;
+}
+
+/* About Section */
+#about {
+    margin-top: 200px;  /* Move it below the welcome section */
+    padding: 50px 0;
+    width: 100%;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-text {
+    width: 100%; /* Full width on smaller screens */
+    padding: 20px;
+}
+
+.about-text h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    color: #ddd;
+}
+
+.profile-image-left {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    border: 5px solid white;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.profile-image-left:hover {
+    transform: scale(1.1);
+}
+
+/* Social Media Section */
+#social-media {
+    margin-top: 50px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 250px;
+    text-align: center;
+}
+
+.social-links a:hover {
+    background-color: white;
+    color: #333;
+}
+
+/* Visitor Counter */
+#visitor-counter {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 18px;
+}
+
+#visitor-counter span {
+    font-weight: bold;
+}
+
+/* Keyframe animation for the welcome message */
+@keyframes fadeInText {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    /* Adjust text size for mobile devices */
+    .welcome-message {
+        font-size: 2em;
+    }
+    .btn-about {
+        font-size: 1em;
+    }
+    .about-text h2 {
+        font-size: 2em;
+    }
+    .about-text p {
+        font-size: 1em;
+    }
+    .social-links a {
+        font-size: 16px;
+    }
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-image-left {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Smaller font size and compact layout for very small devices */
+    .welcome-message {
+        font-size: 1.5em;
+    }
+    .btn-about {
+        font-size: 0.9em;
+    }
+    .about-text h2 {
+        font-size: 1.8em;
+    }
+    .about-text p {
+        font-size: 0.9em;
+    }
+    .social-links a {
+        font-size: 14px;
+    }
+    .profile-image-left {
+        width: 180px;
+        height: 180px;
+    }
+}
+
